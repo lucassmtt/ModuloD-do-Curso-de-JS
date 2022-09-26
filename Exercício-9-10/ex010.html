@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran BR-SC 480</title>
+</head>
+<body>
+    <h1>Sistema de Verificação de Velocidade</h1>
+    Velocidade na via <input type="number" name="velotext" id="velotext"><strong> km/h </strong> 
+    <input type="button" value="Verificar" onclick="defverific()">
+    <div id="Res"></div>
+    <script>
+        function defverific(){
+            var velovalue = window.document.getElementById('velotext')
+            var Res = window.document.getElementById('Res')
+            var velocidade = Number(velovalue.value)
+            Res.innerHTML += `Sua velocidade é de <strong>${velocidade}km/h</strong>`
+            if (velocidade >= 90){
+                Res.innerHTML += '<p>Sua velocidade está acima do permitido, você foi <strong>MULTADO</strong></p>'
+            }
+            Res.innerHTML += 'Dirija sempre com sinto de segurança!'
+        }
+    </script>
+</body>
+</html>
