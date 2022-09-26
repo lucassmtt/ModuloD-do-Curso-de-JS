@@ -1,37 +1,50 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Identificador de nacionalidade</title>
+    <title>Identificador de Nacionalidade</title>
+    <style>
+        body{
+            background-color: aqua;
+            font-size: Arial, 20px;
+
+        }
+    </style>
 </head>
 <body>
-    <h1>Exemplo de identificador de nacionalidade</h1>
-    <h2>País:</h2>
-    <input type="text" name="paístext" id="paístext">
-    <input type="button" value="VERIFICAR" onclick="verificar()">
-    <div id="DIV1">DIV1</div>
-    <h2>Estado</h2>
-    <input type="text" name="estadotext" id="estadotext">
-    <input type="button" value="VERIFICAR" onclick="verificar()">
-    <div id="DIV2">DIV2</div>
-    <h2>Cidade</h2>
-    <input type="text" name="cidadetext" id="cidadetext">
-    <input type="button" value="VERIFICAR" onclick="verificar()">
-    <div id="DIV3">DIV3</div>
-    <script>
-        function verificar(){
-            var p = document.getElementById('paístext')
-            var DIV1 = document.getElementById('DIV1')
-            var e = document.getElementById('estadotext')
-            var div2 = document.getElementById('DIV2')
-            var c = document.getElementByID('cidadetext')
-            var div3 = document.getElementById('DIV3')
-            if (p == 'BRASIL'){
-                DIV1.innerHTML = 'BRASILEIRO'
+    <h1>Exemplo de Identificador de Nacionalidade</h1>
+    <h2>País/country</h2>
+        <input type="text" id="countryid">
+        <input type="button" value="OK" onclick="identificarpaís()">
+        <div id="DIV1">DIV1</div>
+        <script>
+            var texto1 = document.querySelector('input#countryid')
+            var texto = String(texto1.value)
+            var div1 = document.querySelector('div#DIV1')
+            function identificarpaís(){
+                if (texto == 'BRASIL' || 'brasil' || 'Brasil'){
+                    div1.innerHTML =+ 'Brasileiro'
+                }
+                else (texto == 'dd')
+                {
+                    div1.innerHTML =+ 'Infelizmente não oferecemos suporte para sua região '
+                }
             }
-        }
-    </script>
+
+        </script>
+    <h2>Estado/State</h2>
+        <input type="text" id="stateid">
+        <input type="button" value="OK" onclick="identificarestado()">
+        <div id="DIV2">DIV2</div>
+        <script>
+            var texto2 = document.querySelector('input#stateid')
+            var divid = document;querySelector('div#DIV2')
+            text2 = String(texto2.value)
+            if (text2 == 'Santa Catarina' || 'SC' || 'RJ' || 'Rio de Janeiro' || 'São Paulo' || 'SP'){
+
+            }
+        </script>
 </body>
 </html>
