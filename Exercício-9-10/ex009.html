@@ -1,26 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IDENTIFICADOR DE NACIOLIDADE</title>
+    <title>Identificador de nacionalidade</title>
 </head>
 <body>
-    <h1>Verificador de identidade</h1>
-    <h2>Naciolidade</h2>
-    <input type="text" id="countrytext">
-    <input type="button" value="OK" onclick="idpaís()">
-    <div id="DIVP"></div>
+    <h1>Exemplo de identificador de nacionalidade</h1>
+    <h2>País:</h2>
+    <input type="text" name="paístext" id="paístext">
+    <input type="button" value="VERIFICAR" onclick="verificar()">
+    <div id="DIV1">DIV1</div>
+    <h2>Estado</h2>
+    <input type="text" name="estadotext" id="estadotext">
+    <input type="button" value="VERIFICAR" onclick="verificar()">
+    <div id="DIV2">DIV2</div>
+    <h2>Cidade</h2>
+    <input type="text" name="cidadetext" id="cidadetext">
+    <input type="button" value="VERIFICAR" onclick="verificar()">
+    <div id="DIV3">DIV3</div>
     <script>
-        function idpaís(){
-            var país = document.getElementById('countrytext')
-            var DIVP = document.getElementById('DIVP')
-            var paísg = String(país.value)
-                if (país == 'BRASIL'){
-                    DIVP.innerHTML = 'BRASILEIRO'
-                }
+        function verificar(){
+            var p = document.getElementById('paístext')
+            var DIV1 = document.getElementById('DIV1')
+            var e = document.getElementById('estadotext')
+            var div2 = document.getElementById('DIV2')
+            var c = document.getElementByID('cidadetext')
+            var div3 = document.getElementById('DIV3')
+            if (p == 'BRASIL'){
+                DIV1.innerHTML = 'BRASILEIRO'
             }
+        }
     </script>
 </body>
 </html>
