@@ -1,1 +1,26 @@
-<html></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDENTIFICADOR DE NACIOLIDADE</title>
+</head>
+<body>
+    <h1>Verificador de identidade</h1>
+    <h2>Naciolidade</h2>
+    <input type="text" id="countrytext">
+    <input type="button" value="OK" onclick="idpaís()">
+    <div id="DIVP"></div>
+    <script>
+        function idpaís(){
+            var país = document.getElementById('countrytext')
+            var DIVP = document.getElementById('DIVP')
+            var paísg = String(país.value)
+                if (país == 'BRASIL'){
+                    DIVP.innerHTML = 'BRASILEIRO'
+                }
+            }
+    </script>
+</body>
+</html>
