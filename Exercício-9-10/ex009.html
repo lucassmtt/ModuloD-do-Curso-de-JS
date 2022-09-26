@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Verificação de Identidade Registrada</title>
+</head>
+<body>
+    <h1>Sistema de verificação de nacionalidade</h1>
+    País/Country <input type="country" name="countrytxt" id="countrytxt">
+    <input type="button" value="OK" onclick="Cadastramento()">
+    <br> <br>
+    <div id="divP">DivP</div>
+    Estado/Estate <input type="estate" name="estatetxt" id="estatetxt">
+    <input type="button" value="OK" onclick="Cadastramento()">
+    <br><br>
+    <div id="divE">DivE</div>
+    Cidade/City <input type="city" name="citytxt" id="citytxt">
+    <input type="button" value="OK" onclick="Cadastramento">
+    <br><br>
+    <div id="divC">DivC</div>
+    Número Telefone/Cell Number <input type="tel" name="teltxt" id="teltxt">
+    <input type="button" value="OK" onclick="Cadastramento">
+    <div id="divT">DivT</div>
+
+    <script>
+        function Cadastramento(){
+            var countrytext = document.getElementById('countrytxt')
+            var estatetext = document.getElementById('estatetxt')
+            var citytext = document.getElementById('citytxt')
+            var numbertext = document.getElementById('teltxt')
+            // lendo as strings ^
+            var divP = document.getElementById('divP')
+            var divE = document.getElementById('divE')
+            var divC = document.getElementById('divC')
+            var divT = document.getElementById('divT')
+            // lendo as div's
+            var paístxt = String(countrytext.value)
+            var estadotxt = String(estatetext.value)
+            var cidadetxt = String(citytext.value)
+            var númerotxt = Number(numbertext.value)
+            // transformando para string maiúscula 
+            var país = String(paístxt.value).toUpperCase
+            var estado = String(estadotxt.value).toUpperCase
+            var cidade = String(estadotxt.value).toUpperCase
+
+            
+        }
+    </script>
+</body>
+</html>
